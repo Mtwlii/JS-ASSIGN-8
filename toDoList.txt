@@ -1,0 +1,5 @@
+- fixed design 
+- data
+-  js logic 
+- connnect ( fixed recipy)
+- random

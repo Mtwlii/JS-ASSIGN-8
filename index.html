@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .none{
+            display: none !important;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: #FFFCEA;" class="min-vh-100 d-flex align-items-center justify-content-center ">
+    <div class="container">
+        <div class="row bg-white rounded-3">
+            <!-- image -->
+            <div class="col-md-5 p-0">
+                <div style="height: 100%;" class="inner position-relative">
+                    <img id="image" style="height: 100%; width: 100%; object-fit: cover;" class="rounded-start-3"
+                        src="./imgs/image1.avif" alt="">
+                    <div style="top: 20px; left: 20px;" class="position-absolute bg-white p-2 rounded-pill">
+                        <i style="color: yellow;" class=" fa-solid fa-star"></i>
+                        <span id="rate"> 4.5</span>
+                        <span id="reviews">(234 reviews)</span>
+                    </div>
+                    <div style="bottom: 20px; left: 20px; right: 20px" class="position-absolute bg-white p-3 rounded-3">
+                        <div class="row justify-content-between text-center">
+                            <div class="col-4">
+                                <i class="fa-solid fa-clock"></i>
+                                <p class="m-0">prep time</p>
+                                <span id="prepTime" >30 min</span>
+                            </div>
+                            <div class="col-4">
+                                <i class="fa-solid fa-clock"></i>
+                                <p class="m-0">cook time</p>
+                                <span id="cookTime">30 min</span>
+                            </div>
+                            <div class="col-4">
+                                <i class="fa-solid fa-users"></i>
+                                <p class="m-0">prep time</p>
+                                <span id="serving">4 people</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content -->
+            <div class="col-md-7">
+                <div class="inner mt-3 d-flex flex-column gap-3">
+                    <div class="tags">
+                        <span id="difficulty" class="badge text-bg-success">Eazy</span>
+                        <span id="type" class="badge text-bg-primary">Italian</span>
+                    </div>
+                    <header>
+                        <h1 id="mealName">Beef Tacos</h1>
+                        <p id="description" class="m-0 text-muted">Flavorful Mexican tacos with seasoned ground beef</p>
+                    </header>
+                    <!-- warning -->
+                    <div id="warning"
+                        class="d-flex align-items-center text-danger bg-danger-subtle rounded-3  border-start border-3 border-danger">
+                        <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                        <div>
+                            <h3 class="h5">Extended Preparation Time
+                            </h3>
+                            <p>This recipe requires more than 45 minutes to prepare. Plan accordingly!
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- navs & tabs -->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="ingredients-tab" data-bs-toggle="tab"
+                                data-bs-target="#ingredients-tab-pane" type="button" role="tab"
+                                aria-controls="ingredients-tab-pane" aria-selected="true">ingredients</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="instructions-tab" data-bs-toggle="tab"
+                                data-bs-target="#instructions-tab-pane" type="button" role="tab"
+                                aria-controls="instructions-tab-pane" aria-selected="false">instructions</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="nutritions-tab" data-bs-toggle="tab"
+                                data-bs-target="#nutritions-tab-pane" type="button" role="tab"
+                                aria-controls="nutritions-tab-pane" aria-selected="false">nutritions</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tips-tab" data-bs-toggle="tab" data-bs-target="#tips-tab-pane"
+                                type="button" role="tab" aria-controls="tips-tab-pane"
+                                aria-selected="false">tips</button>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <!-- ingredients -->
+                        <div class="tab-pane fade show active" id="ingredients-tab-pane" role="tabpanel"
+                            aria-labelledby="ingredients-tab" tabindex="0">
+                            <ul id="ingredients" style="background-color: #FFFAEC;" class="list-unstyled d-flex flex-column gap-3 p-3">
+                                <!-- <li class="d-flex align-items-center gap-2">
+                                    <span style="width: 20px ; height: 20px; "
+                                        class="p-2 rounded-circle d-flex justify-content-center align-items-center bg-danger text-white">1</span>
+                                    500g ground beef
+                                </li> -->
+
+                            </ul>
+
+                        </div>
+                        <!-- instructions -->
+                        <div class="tab-pane fade" id="instructions-tab-pane" role="tabpanel"
+                            aria-labelledby="instructions-tab" tabindex="0">
+                            <ul id="instructions" class="list-unstyled d-flex flex-column gap-3 p-3">
+                                <!-- <li class="d-flex align-items-center gap-2">
+                                    <span style="width: 40px ; height: 40px; "
+                                        class="p-2 rounded-2 d-flex justify-content-center align-items-center bg-warning text-white">1</span>
+                                    Heat a large skillet over medium-high heat. Cook ground beef until browned.
+                                </li> -->
+
+                            </ul>
+                        </div>
+                        <!-- nutritions -->
+                        <div class="tab-pane fade" id="nutritions-tab-pane" role="tabpanel"
+                            aria-labelledby="nutritions-tab" tabindex="0">
+                            <div id="nutritions" class="row g-3">
+                                <!-- <div class="col-md-6">
+                                    <div
+                                        class="inner d-flex justify-content-between bg-light-subtle p-3 rounded-2 align-items-center border border-2">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="icon bg-danger text-white p-2 rounded-2"><i
+                                                    class="fa-solid fa-fire"></i>
+
+                                            </div>
+                                            <span>Calories</span>
+                                        </div>
+                                        <span class="fw-bold">420 kcal</span>
+                                    </div>
+                                </div> -->
+
+                            </div>
+                        </div>
+                        <!-- tips -->
+                        <div class="tab-pane fade " id="tips-tab-pane" role="tabpanel" aria-labelledby="tips-tab"
+                            tabindex="0" >
+                            <div id="tips" class="inner d-flex flex-column gap-2">
+                                 <!-- <div
+                                class="d-flex align-items-center p-3 bg-warning-subtle rounded-3  border-start border-3 border-warning">
+                                <div class="icon p-1 rounded-circle d-flex justify-content-center align-items-center bg-warning text-white me-1">
+                                    <i class="fa-solid fa-check "></i>
+                                </div>
+                                This recipe requires more than 45 minutes to prepare. Plan accordingly!
+                            </div> -->
+                            </div>
+                           
+                        </div>
+
+                    </div>
+                    <!-- button -->
+                    <button id="generate-btn" style="width: fit-content;" class="btn btn-success">
+                     <i class="fa-solid fa-rotate"></i>
+                        Try Another Randome Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
